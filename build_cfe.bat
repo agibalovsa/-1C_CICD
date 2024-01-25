@@ -1,0 +1,1 @@
+executor build.sbsl build_cfe "../../" 1
