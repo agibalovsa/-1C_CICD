@@ -1,1 +1,0 @@
-executor build.sbsl build_patch "../../" 1

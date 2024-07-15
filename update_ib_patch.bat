@@ -1,1 +1,0 @@
-executor build.sbsl update_ib_patch "../../" 1
