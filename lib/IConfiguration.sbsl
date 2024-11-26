@@ -1,6 +1,7 @@
 #!/usr/bin/executor
 
 #требуется IConfigurationProperties.sbsl
+#требуется ILogging.sbsl
 
 // ПрограмнныйИнтерфейс
 
