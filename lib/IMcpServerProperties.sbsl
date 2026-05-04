@@ -1,0 +1,99 @@
+#!/usr/bin/executor
+
+@Глобально
+структура McpRequestInitParams
+    знч protocolVersion: Строка
+    знч capabilities:    Соответствие<Строка, Строка>
+    знч clientInfo:      Info
+;
+
+@Глобально
+структура McpRequestCallParams
+    знч name:      Строка
+    знч arguments: Соответствие<Строка, Строка>
+;
+
+@Глобально
+структура McpRequestInit
+    знч id:      Число
+    знч method:  Строка
+    знч jsonrpc: Строка
+    знч params:  McpRequestInitParams
+;
+
+@Глобально
+структура McpRequestCall
+    знч id:      Число
+    знч method:  Строка
+    знч jsonrpc: Строка
+    знч params:  McpRequestCallParams
+;
+
+@Глобально
+структура McpToolsCapability
+    знч listChanged: Булево = Ложь
+;
+
+@Глобально
+структура McpCapabilities
+    знч tools: McpToolsCapability
+;
+
+@Глобально
+структура Info
+    знч name:    Строка
+    знч version: Строка
+;
+
+@Глобально
+структура Result
+    знч protocolVersion: Строка
+    знч capabilities:    McpCapabilities
+    знч serverInfo:      Info
+;
+
+@Глобально
+структура ResponseServer
+    пер jsonrpc: Строка
+    пер id:      Число 
+    пер result:  Объект?
+;
+
+@Глобально
+структура PropertyDetails
+    знч myType:      Строка
+    знч description: Строка
+;
+
+@Глобально
+структура Schema
+    знч myType:               Строка
+    знч additionalProperties: Булево = Ложь 
+    пер properties:           Соответствие<Строка, PropertyDetails>
+    пер required:             Массив<Строка>
+;
+
+@Глобально
+структура ToolContent
+    знч myType: Строка
+    знч text:   Строка
+;
+
+@Глобально
+структура Tool
+    знч name:        Строка
+    знч title:       Строка
+    знч description: Строка
+    знч inputSchema: Schema
+;
+
+@Глобально
+структура ToolsList
+    знч tools: Массив<Tool>
+;
+
+@Глобально
+структура CallToolResult
+    знч content: Массив<ToolContent>
+    знч isError: Булево
+;

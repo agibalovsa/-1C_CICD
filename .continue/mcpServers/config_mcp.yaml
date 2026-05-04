@@ -1,0 +1,14 @@
+name: 1c-executor-mcp
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: 1c-executor-mcp
+    command: executor
+    args:
+      - scripts/1c_cicd/main.sbsl
+      - -Режимы
+      - mcp
+      - -ПутьДоРепозитория
+      - " "
+    env: {}
+    connectionTimeout: 600000 
