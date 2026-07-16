@@ -1,8 +1,8 @@
 #!/usr/bin/executor
 
-#требуется oc_main.sbsl
 #требуется IConfigurationProperties.sbsl
 #требуется ILogging.sbsl
+#требуется oc_main.sbsl
 
 // ПрограммныйИнтерфейс
 
