@@ -71,7 +71,7 @@
         "update_ib",
         "archive_ib",
         "replicate_ib",
-        "git_sync_ib_xml",
+        "git_sync_xml",
         "git_commit_ib_xml"
     ]
 
